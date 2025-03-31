@@ -45,7 +45,7 @@ export default function PricingPage() {
             </CardHeader>
             <CardContent className="pb-8">
               <ul className="space-y-4">
-                {t.raw('plans.starter.features').map((feature, index) => (
+                {t.raw('plans.starter.features').map((feature: string, index: number) => (
                   <li key={index} className="flex items-start">
                     <svg className="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -79,7 +79,7 @@ export default function PricingPage() {
             </CardHeader>
             <CardContent className="pb-8">
               <ul className="space-y-4">
-                {t.raw('plans.professional.features').map((feature, index) => (
+                {t.raw('plans.professional.features').map((feature: string, index: number) => (
                   <li key={index} className="flex items-start">
                     <svg className="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -109,7 +109,7 @@ export default function PricingPage() {
             </CardHeader>
             <CardContent className="pb-8">
               <ul className="space-y-4">
-                {t.raw('plans.enterprise.features').map((feature, index) => (
+                {t.raw('plans.enterprise.features').map((feature: string, index: number) => (
                   <li key={index} className="flex items-start">
                     <svg className="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
