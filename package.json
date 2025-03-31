@@ -23,7 +23,8 @@
     "clsx": "^2.0.0",
     "tailwind-merge": "^2.2.0",
     "tailwindcss-animate": "^1.0.7",
-    "lucide-react": "^0.323.0"
+    "lucide-react": "^0.323.0",
+    "axios": "^1.6.7"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
