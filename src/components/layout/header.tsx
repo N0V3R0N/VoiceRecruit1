@@ -1,6 +1,6 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/lib/navigation';
 import { Navbar, NavbarBrand, NavbarItems, NavbarItem, NavbarActions } from '@/components/layout/navbar';
 import { Button } from '@/components/ui/button';
@@ -8,6 +8,7 @@ import ThemeSwitcher from '@/components/theme-switcher';
 
 export default function Header() {
   const t = useTranslations('common');
+  const locale = useLocale();
 
   return (
     <Navbar>
@@ -27,10 +28,10 @@ export default function Header() {
       <NavbarActions>
         <ThemeSwitcher />
         <div className="flex items-center gap-2 mx-4">
-          <Link href="/fr" locale="fr" className={`p-2 rounded-md ${t.locale() === 'fr' ? 'font-bold' : ''}`}>
+          <Link href="/fr" locale="fr" className={`p-2 rounded-md ${locale === 'fr' ? 'font-bold' : ''}`}>
             FR
           </Link>
-          <Link href="/en" locale="en" className={`p-2 rounded-md ${t.locale() === 'en' ? 'font-bold' : ''}`}>
+          <Link href="/en" locale="en" className={`p-2 rounded-md ${locale === 'en' ? 'font-bold' : ''}`}>
             EN
           </Link>
         </div>
