@@ -1,0 +1,23 @@
+{
+  "dashboard": {
+    "welcome": "Welcome, {name}",
+    "sidebar": {
+      "overview": "Overview",
+      "positions": "Positions",
+      "candidates": "Candidates",
+      "interviews": "Interviews",
+      "voiceConfig": "Voice Configuration",
+      "settings": "Settings"
+    },
+    "stats": {
+      "interviews": "Interviews",
+      "completed": "Completed",
+      "pending": "Pending",
+      "positions": "Positions"
+    }
+  },
+  "voiceConfig": {
+    "title": "Voice Configuration",
+    "intro": "Configure voices for your automated interviews"
+  }
+} 

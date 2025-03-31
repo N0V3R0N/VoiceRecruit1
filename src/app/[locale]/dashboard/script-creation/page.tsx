@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { 
@@ -21,28 +23,34 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
+// Add types for conversation
+type ConversationMessage = {
+  sender: 'ai' | 'user';
+  message: string;
+};
+
 export default function ScriptCreationPage() {
   const t = useTranslations('voiceConfig');
   const tDashboard = useTranslations('dashboard');
   
   // État pour les questions
-  const [questions, setQuestions] = useState([
+  const [questions, setQuestions] = useState<string[]>([
     "Pourriez-vous vous présenter et me parler de votre parcours professionnel ?",
     "Qu'est-ce qui vous motive à postuler pour ce poste ?",
     "Pouvez-vous me parler d'un projet dont vous êtes particulièrement fier ?"
   ]);
   
   // État pour le script
-  const [scriptName, setScriptName] = useState("");
-  const [scriptDescription, setScriptDescription] = useState("");
-  const [scriptDuration, setScriptDuration] = useState("10-15 minutes");
-  const [introduction, setIntroduction] = useState("");
-  const [conclusion, setConclusion] = useState("");
+  const [scriptName, setScriptName] = useState<string>("");
+  const [scriptDescription, setScriptDescription] = useState<string>("");
+  const [scriptDuration, setScriptDuration] = useState<string>("10-15 minutes");
+  const [introduction, setIntroduction] = useState<string>("");
+  const [conclusion, setConclusion] = useState<string>("");
   
   // État pour le test
-  const [isTesting, setIsTesting] = useState(false);
-  const [selectedVoice, setSelectedVoice] = useState("Sophie");
-  const [conversation, setConversation] = useState([
+  const [isTesting, setIsTesting] = useState<boolean>(false);
+  const [selectedVoice, setSelectedVoice] = useState<string>("Sophie");
+  const [conversation, setConversation] = useState<ConversationMessage[]>([
     { sender: 'ai', message: "Bonjour, je suis l'assistant virtuel de VoiceRecruit. Merci de prendre le temps de participer à cet entretien préliminaire. Pourriez-vous vous présenter et me parler de votre parcours professionnel ?" },
     { sender: 'user', message: "Bonjour, je m'appelle Jean Dupont. Je suis développeur web avec 5 ans d'expérience..." }
   ]);
@@ -53,14 +61,14 @@ export default function ScriptCreationPage() {
   };
   
   // Fonction pour modifier une question
-  const updateQuestion = (index, value) => {
+  const updateQuestion = (index: number, value: string) => {
     const newQuestions = [...questions];
     newQuestions[index] = value;
     setQuestions(newQuestions);
   };
   
   // Fonction pour supprimer une question
-  const deleteQuestion = (index) => {
+  const deleteQuestion = (index: number) => {
     const newQuestions = [...questions];
     newQuestions.splice(index, 1);
     setQuestions(newQuestions);
@@ -79,7 +87,7 @@ export default function ScriptCreationPage() {
   };
   
   // Fonction pour écouter un exemple de voix
-  const previewVoice = (voice) => {
+  const previewVoice = (voice: string) => {
     // Simuler la lecture d'un exemple de voix
     console.log(`Prévisualisation de la voix: ${voice}`);
   };
@@ -322,5 +330,19 @@ export default function ScriptCreationPage() {
                                   ? 'bg-white dark:bg-gray-800' 
                                   : 'bg-blue-500 text-white'
                               }`}>
-                             
-(Content truncated due to size limit. Use line ranges to read in chunks)
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </DashboardMain>
+      </DashboardContent>
+    </Dashboard>
+  );
+}

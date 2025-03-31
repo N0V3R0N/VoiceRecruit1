@@ -1,0 +1,23 @@
+{
+  "dashboard": {
+    "welcome": "Bienvenue, {name}",
+    "sidebar": {
+      "overview": "Vue d'ensemble",
+      "positions": "Postes",
+      "candidates": "Candidats",
+      "interviews": "Entretiens",
+      "voiceConfig": "Configuration des voix",
+      "settings": "Paramètres"
+    },
+    "stats": {
+      "interviews": "Entretiens",
+      "completed": "Complétés",
+      "pending": "En attente",
+      "positions": "Postes"
+    }
+  },
+  "voiceConfig": {
+    "title": "Configuration des voix",
+    "intro": "Configurez les voix pour vos entretiens automatisés"
+  }
+} 
