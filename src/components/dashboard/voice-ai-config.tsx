@@ -26,12 +26,14 @@ const VoiceAIConfigSection = React.forwardRef<
   VoiceAIConfigSectionProps
 >(({ className, title, ...props }, ref) => {
   return (
-    <Card ref={ref} className={cn("", className)}>
-      <CardHeader>
-        <CardTitle>{title}</CardTitle>
-      </CardHeader>
-      <CardContent {...props} />
-    </Card>
+    <div ref={ref}>
+      <Card className={cn("", className)}>
+        <CardHeader>
+          <CardTitle>{title}</CardTitle>
+        </CardHeader>
+        <CardContent {...props} />
+      </Card>
+    </div>
   )
 })
 VoiceAIConfigSection.displayName = "VoiceAIConfigSection"
