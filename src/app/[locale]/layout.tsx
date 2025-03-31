@@ -1,7 +1,8 @@
+import { Providers } from '@/components/providers';
+import RootLayout from '@/components/layout/root-layout';
 import { locales } from '@/i18n/settings';
-import ClientProviders from '@/components/client-providers';
 
-// This is a Server Component that handles static params generation
+// Server Component that handles static params generation
 export function generateStaticParams() {
   return locales.map(locale => ({ locale }));
 }
@@ -14,9 +15,11 @@ export default async function LocaleLayout({ children, params: { locale } }) {
   return (
     <html lang={locale} suppressHydrationWarning>
       <body>
-        <ClientProviders locale={locale} messages={messages}>
-          {children}
-        </ClientProviders>
+        <Providers locale={locale} messages={messages}>
+          <RootLayout params={{ locale }}>
+            {children}
+          </RootLayout>
+        </Providers>
       </body>
     </html>
   );
