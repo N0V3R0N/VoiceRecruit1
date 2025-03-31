@@ -1,7 +1,8 @@
+'use client';
+
 import { ThemeProvider } from '@/components/theme-provider';
 import { Providers } from '@/components/providers';
 import RootLayout from '@/components/layout/root-layout';
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { locales } from '@/i18n/settings';
 
 export function generateStaticParams() {
@@ -9,8 +10,6 @@ export function generateStaticParams() {
 }
 
 export default async function LocaleLayout({ children, params: { locale } }) {
-  unstable_setRequestLocale(locale);
-  
   const messages = (await import(`@/i18n/messages/${locale}.json`)).default;
 
   return (

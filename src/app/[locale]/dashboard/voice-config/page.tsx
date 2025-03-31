@@ -23,16 +23,24 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { getAvailableVoices, generateSpeech } from '@/lib/voice-ai';
 
+// Define the Voice type
+interface Voice {
+  id: string;
+  name: string;
+  gender: string;
+  language: string;
+}
+
 export default function VoiceConfigPage() {
   const t = useTranslations('voiceConfig');
   const tDashboard = useTranslations('dashboard');
   
-  const [voices, setVoices] = useState([]);
-  const [selectedVoice, setSelectedVoice] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [audioUrl, setAudioUrl] = useState(null);
-  const [audioElement, setAudioElement] = useState(null);
+  const [voices, setVoices] = useState<Voice[]>([]);
+  const [selectedVoice, setSelectedVoice] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
+  const [audioUrl, setAudioUrl] = useState<string | null>(null);
+  const [audioElement, setAudioElement] = useState<HTMLAudioElement | null>(null);
   
   // Charger les voix disponibles
   useEffect(() => {
@@ -69,7 +77,7 @@ export default function VoiceConfigPage() {
   }, []);
   
   // Fonction pour prévisualiser une voix
-  const previewVoice = async (voiceId) => {
+  const previewVoice = async (voiceId: string) => {
     try {
       setIsLoading(true);
       const sampleText = "Bonjour, je suis l'assistant virtuel de VoiceRecruit. Comment puis-je vous aider aujourd'hui ?";
@@ -90,7 +98,7 @@ export default function VoiceConfigPage() {
   };
   
   // Fonction pour sélectionner une voix
-  const selectVoice = (voiceId) => {
+  const selectVoice = (voiceId: string) => {
     setSelectedVoice(voiceId);
   };
   
