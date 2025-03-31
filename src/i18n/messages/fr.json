@@ -1,4 +1,17 @@
 {
+  "common": {
+    "navigation": {
+      "features": "Fonctionnalités",
+      "pricing": "Tarifs",
+      "login": "Connexion",
+      "signup": "Inscription"
+    },
+    "theme": {
+      "light": "Mode clair",
+      "dark": "Mode sombre",
+      "system": "Thème système"
+    }
+  },
   "dashboard": {
     "welcome": "Bienvenue, {name}",
     "sidebar": {

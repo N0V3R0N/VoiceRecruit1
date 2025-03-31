@@ -1,4 +1,17 @@
 {
+  "common": {
+    "navigation": {
+      "features": "Features",
+      "pricing": "Pricing",
+      "login": "Login",
+      "signup": "Sign Up"
+    },
+    "theme": {
+      "light": "Light mode",
+      "dark": "Dark mode",
+      "system": "System theme"
+    }
+  },
   "dashboard": {
     "welcome": "Welcome, {name}",
     "sidebar": {
