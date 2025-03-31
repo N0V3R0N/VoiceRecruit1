@@ -8,5 +8,8 @@
         "installCommand": "npm install --legacy-peer-deps"
       }
     }
-  ]
+  ],
+  "github": {
+    "enabled": true
+  }
 } 
