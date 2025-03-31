@@ -50,14 +50,4 @@ If you encounter any deployment issues:
 - Multi-language support (English, French)
 - Voice-based interviews with AI
 - Interview script creation and management
-- Dashboard for managing interviews and candidates
-
-## Dependencies
-
-The project requires the following key dependencies:
-
-- Next.js 15.2.4
-- React 18.2.0
-- next-intl for internationalization
-- next-themes for dark/light mode
-- axios for API requests 
+- Dashboard for managing interviews and candidates 
