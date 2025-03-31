@@ -1,3 +1,5 @@
+'use client';
+
 import Header from '@/components/layout/header';
 import FooterComponent from '@/components/layout/footer-component';
 

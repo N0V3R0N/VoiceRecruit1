@@ -1,3 +1,5 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
 import { Link } from '@/lib/navigation';
 import { Navbar, NavbarBrand, NavbarItems, NavbarItem, NavbarActions } from '@/components/layout/navbar';
