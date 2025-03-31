@@ -44,7 +44,7 @@ export default function HomePage() {
                 {t('problem.aiImpact')}
               </p>
               <ul className="space-y-3">
-                {t.raw('problem.consequences').map((consequence, index) => (
+                {t.raw('problem.consequences').map((consequence: string, index: number) => (
                   <li key={index} className="flex items-start">
                     <span className="mr-2 text-red-500">•</span>
                     <span className="text-gray-700 dark:text-gray-300">{consequence}</span>
