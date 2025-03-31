@@ -14,6 +14,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { locales } from '@/i18n/settings';
 
+// Force the page to be dynamically generated instead of statically generated
+export const dynamic = 'force-dynamic';
+
 // Generate static params for Next.js static site generation
 export function generateStaticParams() {
   return locales.map(locale => ({ locale }));
