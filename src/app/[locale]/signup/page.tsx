@@ -4,6 +4,13 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Link } from '@/lib/navigation';
+import { locales } from '@/i18n/settings';
+
+export const dynamic = 'force-dynamic';
+
+export function generateStaticParams() {
+  return locales.map(locale => ({ locale }));
+}
 
 export default function SignupPage() {
   const t = useTranslations('signup');
