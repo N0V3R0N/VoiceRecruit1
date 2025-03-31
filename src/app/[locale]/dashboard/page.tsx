@@ -12,6 +12,12 @@ import {
 } from '@/components/dashboard/dashboard-layout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { locales } from '@/i18n/settings';
+
+// Generate static params for Next.js static site generation
+export function generateStaticParams() {
+  return locales.map(locale => ({ locale }));
+}
 
 export default function DashboardPage() {
   const t = useTranslations('dashboard');
