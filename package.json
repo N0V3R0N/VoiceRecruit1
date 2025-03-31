@@ -32,5 +32,8 @@
     "@types/node": "^20.9.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0"
+  },
+  "installConfig": {
+    "legacy-peer-deps": true
   }
 }
