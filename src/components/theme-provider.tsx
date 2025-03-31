@@ -22,15 +22,32 @@ const initialState: ThemeProviderState = {
 
 const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
 
+// Helper function to safely check localStorage
+const getThemeFromLocalStorage = (key: string, fallback: Theme): Theme => {
+  if (typeof window !== 'undefined') {
+    try {
+      const storedValue = localStorage.getItem(key) as Theme;
+      return storedValue || fallback;
+    } catch (error) {
+      console.error('Error accessing localStorage:', error);
+      return fallback;
+    }
+  }
+  return fallback;
+};
+
 export function ThemeProvider({
   children,
   defaultTheme = 'system',
   storageKey = 'vite-ui-theme',
   ...props
 }: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(
-    () => (localStorage.getItem(storageKey) as Theme) || defaultTheme
-  );
+  const [theme, setTheme] = useState<Theme>(defaultTheme);
+  
+  // Initialize theme from localStorage after component mounts
+  useEffect(() => {
+    setTheme(getThemeFromLocalStorage(storageKey, defaultTheme));
+  }, [storageKey, defaultTheme]);
 
   useEffect(() => {
     const root = window.document.documentElement;
@@ -51,9 +68,15 @@ export function ThemeProvider({
 
   const value = {
     theme,
-    setTheme: (theme: Theme) => {
-      localStorage.setItem(storageKey, theme);
-      setTheme(theme);
+    setTheme: (newTheme: Theme) => {
+      if (typeof window !== 'undefined') {
+        try {
+          localStorage.setItem(storageKey, newTheme);
+        } catch (error) {
+          console.error('Error setting theme in localStorage:', error);
+        }
+      }
+      setTheme(newTheme);
     },
   };
 
