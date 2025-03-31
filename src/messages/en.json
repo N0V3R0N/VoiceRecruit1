@@ -1,0 +1,213 @@
+{
+  "en": {
+    "common": {
+      "navigation": {
+        "home": "Home",
+        "pricing": "Pricing",
+        "features": "Features",
+        "login": "Login",
+        "signup": "Sign up",
+        "dashboard": "Dashboard"
+      },
+      "theme": {
+        "light": "Light",
+        "dark": "Dark",
+        "system": "System"
+      },
+      "language": {
+        "fr": "French",
+        "en": "English"
+      },
+      "buttons": {
+        "getStarted": "Get Started",
+        "learnMore": "Learn More",
+        "contactUs": "Contact Us",
+        "apply": "Apply",
+        "save": "Save",
+        "cancel": "Cancel",
+        "delete": "Delete",
+        "edit": "Edit"
+      }
+    },
+    "home": {
+      "hero": {
+        "title": "Replace Cover Letters with AI Interviews",
+        "subtitle": "Naturally filter candidates with instant phone interviews conducted by AI",
+        "cta": "Try for Free"
+      },
+      "problem": {
+        "title": "The Problem",
+        "description": "In recruitment, cover letters once served as a natural filter for candidates. Why? Because writing a good letter took an hour or more. Only truly motivated candidates took the time to write one.",
+        "aiImpact": "Today, with ChatGPT and AI, a cover letter can be generated in 5 minutes. Result: the natural pre-filter has disappeared.",
+        "consequences": [
+          "Recruiters receive hundreds of generic applications.",
+          "The candidate's genuine interest has become impossible to measure.",
+          "Sorting applications becomes inefficient and costly."
+        ]
+      },
+      "solution": {
+        "title": "The Solution",
+        "description": "We replace the cover letter with an instant phone interview with an AI.",
+        "steps": {
+          "title": "How it works?",
+          "step1": "The candidate clicks on \"Apply and take the call\" → they receive an instant or scheduled call.",
+          "step2": "An AI asks them personalized questions about their motivation, skills, and even technical questions depending on the customization chosen.",
+          "step3": "The interview is recorded, transcribed, and analyzed to provide recruiters with a structured summary."
+        }
+      },
+      "benefits": {
+        "title": "Why it works?",
+        "description": "Taking a call is more engaging than generating a letter in 5 minutes. It's a new natural pre-filter: only truly motivated candidates who believe they have the skills will go through with it.",
+        "list": {
+          "title": "The Added Value",
+          "authenticity": "Authenticity: Impossible to copy-paste an AI response, candidates must express themselves spontaneously.",
+          "timeEfficiency": "Time-saving: No need to read letters, the recruiter directly receives a summary and a score.",
+          "engagement": "Better engagement: A modern and dynamic experience for candidates.",
+          "softSkills": "Soft skills analyzed from step 1: Clarity of expression, structuring of ideas, oral fluency."
+        }
+      },
+      "market": {
+        "title": "The Market",
+        "description": "The digital recruitment market is rapidly evolving. With players like LinkedIn, Workday, or SmartRecruiters, companies are looking for smarter tools to efficiently sort applications."
+      },
+      "businessModel": {
+        "title": "The Business Model",
+        "b2b": "B2B SaaS: Monthly subscription based on recruitment volume.",
+        "premium": "Premium Option: Advanced analysis of responses with AI, integration with ATS (Applicant Tracking System)."
+      },
+      "conclusion": {
+        "title": "Conclusion",
+        "description": "Recruitment has changed, but the tools haven't kept up. The cover letter is dead. We offer its intelligent, fast, and authentic replacement."
+      }
+    },
+    "pricing": {
+      "title": "Simple and transparent pricing",
+      "subtitle": "Choose the plan that matches your recruitment needs",
+      "monthly": "Monthly",
+      "yearly": "Yearly",
+      "savePercent": "Save 20%",
+      "plans": {
+        "starter": {
+          "name": "Starter",
+          "price": "49",
+          "description": "Ideal for small businesses with occasional recruitment needs",
+          "features": [
+            "Up to 10 interviews per month",
+            "1 AI voice of your choice",
+            "Customizable questions",
+            "Interview summaries",
+            "Email support"
+          ],
+          "cta": "Get Started"
+        },
+        "professional": {
+          "name": "Professional",
+          "price": "149",
+          "description": "For growing businesses with regular recruitment needs",
+          "features": [
+            "Up to 50 interviews per month",
+            "3 AI voices of your choice",
+            "Advanced customizable questions",
+            "Detailed response analysis",
+            "Basic ATS integration",
+            "Priority support"
+          ],
+          "cta": "Get Started",
+          "popular": "Most Popular"
+        },
+        "enterprise": {
+          "name": "Enterprise",
+          "price": "Custom",
+          "description": "For large companies with significant recruitment needs",
+          "features": [
+            "Unlimited interviews",
+            "All available AI voices",
+            "Advanced customizable questions",
+            "In-depth AI analysis",
+            "Complete ATS integration",
+            "Dedicated API",
+            "Dedicated account manager"
+          ],
+          "cta": "Contact Us"
+        }
+      }
+    },
+    "login": {
+      "title": "Login",
+      "email": "Email",
+      "password": "Password",
+      "rememberMe": "Remember me",
+      "forgotPassword": "Forgot password?",
+      "submit": "Login",
+      "noAccount": "Don't have an account?",
+      "signUp": "Sign up"
+    },
+    "signup": {
+      "title": "Create an account",
+      "name": "Full name",
+      "email": "Email",
+      "company": "Company",
+      "password": "Password",
+      "confirmPassword": "Confirm password",
+      "terms": "I agree to the terms of service and privacy policy",
+      "submit": "Sign up",
+      "haveAccount": "Already have an account?",
+      "login": "Login"
+    },
+    "dashboard": {
+      "welcome": "Welcome, {name}",
+      "stats": {
+        "title": "Statistics",
+        "interviews": "Interviews",
+        "completed": "Completed",
+        "pending": "Pending",
+        "positions": "Open positions"
+      },
+      "sidebar": {
+        "overview": "Overview",
+        "positions": "Positions",
+        "candidates": "Candidates",
+        "interviews": "Interviews",
+        "settings": "Settings",
+        "voiceConfig": "Voice Configuration",
+        "billing": "Billing",
+        "help": "Help"
+      }
+    },
+    "voiceConfig": {
+      "title": "AI Voice Configuration",
+      "description": "Customize AI voices for your phone interviews",
+      "voiceSelection": {
+        "title": "Voice Selection",
+        "description": "Choose from our high-quality natural voices",
+        "preview": "Preview",
+        "current": "Current voice"
+      },
+      "questionConfig": {
+        "title": "Question Configuration",
+        "description": "Customize the questions asked by the AI",
+        "addQuestion": "Add question",
+        "editQuestion": "Edit question",
+        "deleteQuestion": "Delete question",
+        "questionTypes": {
+          "motivation": "Motivation",
+          "experience": "Experience",
+          "skills": "Skills",
+          "technical": "Technical",
+          "personality": "Personality"
+        }
+      },
+      "interviewFlow": {
+        "title": "Interview Flow",
+        "description": "Configure the flow of the phone interview",
+        "introduction": "Introduction",
+        "mainQuestions": "Main questions",
+        "conclusion": "Conclusion",
+        "duration": "Estimated duration"
+      },
+      "save": "Save configuration",
+      "preview": "Preview interview",
+      "reset": "Reset"
+    }
+  }
+}

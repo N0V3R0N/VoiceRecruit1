@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation VoiceRecruit</title>
+    <style>
+        :root {
+            --primary-color: #3b82f6;
+            --secondary-color: #1e40af;
+            --text-color: #1f2937;
+            --bg-color: #ffffff;
+            --card-bg: #f9fafb;
+            --border-color: #e5e7eb;
+        }
+        
+        .dark {
+            --primary-color: #60a5fa;
+            --secondary-color: #93c5fd;
+            --text-color: #f9fafb;
+            --bg-color: #111827;
+            --card-bg: #1f2937;
+            --border-color: #374151;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .theme-toggle, .lang-toggle {
+            background: none;
+            border: 1px solid white;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        
+        .theme-toggle:hover, .lang-toggle:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        main {
+            padding: 2rem 0;
+        }
+        
+        h1, h2, h3 {
+            color: var(--primary-color);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        h3 {
+            font-size: 1.3rem;
+            margin: 1.5rem 0 1rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+        }
+        
+        .card h3 {
+            margin-top: 0;
+        }
+        
+        .toc {
+            position: sticky;
+            top: 2rem;
+            max-height: calc(100vh - 4rem);
+            overflow-y: auto;
+            padding-right: 1rem;
+        }
+        
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .toc li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .toc a {
+            display: block;
+            padding: 0.25rem 0;
+            color: var(--text-color);
+            text-decoration: none;
+            border-left: 2px solid transparent;
+            padding-left: 1rem;
+        }
+        
+        .toc a:hover, .toc a.active {
+            color: var(--primary-color);
+            border-left-color: var(--primary-color);
+        }
+        
+        .toc .toc-h2 {
+            font-weight: bold;
+        }
+        
+        .toc .toc-h3 {
+            padding-left: 2rem;
+            font-size: 0.9rem;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 2rem;
+        }
+        
+        pre {
+            background-color: var(--card-bg);
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+            border: 1px solid var(--border-color);
+        }
+        
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 1rem;
+        }
+        
+        .tab {
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+        }
+        
+        .tab.active {
+            border-bottom-color: var(--primary-color);
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .toc {
+                position: relative;
+                top: 0;
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">VoiceRecruit Documentation</div>
+            <div class="controls">
+                <button class="theme-toggle" id="theme-toggle">Mode sombre</button>
+                <button class="lang-toggle" id="lang-toggle">English</button>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <main>
+            <h1>Documentation VoiceRecruit</h1>
+            
+            <div class="grid">
+                <aside>
+                    <div class="toc">
+                        <ul>
+                            <li><a href="#introduction" class="toc-h2">Introduction</a></li>
+                            <li><a href="#architecture" class="toc-h2">Architecture du système</a></li>
+                            <li><a href="#fonctionnalites" class="toc-h2">Fonctionnalités principales</a></li>
+                            <li><a href="#technologies" class="toc-h2">Technologies utilisées</a></li>
+                            <li><a href="#guide" class="toc-h2">Guide d'utilisation</a></li>
+                            <li><a href="#api" class="toc-h2">API et intégrations</a></li>
+                            <li><a href="#deploiement" class="toc-h2">Déploiement</a></li>
+                            <li><a href="#faq" class="toc-h2">Foire aux questions</a></li>
+                        </ul>
+                    </div>
+                </aside>
+                
+                <div class="content">
+                    <section id="introduction">
+                        <h2>Introduction</h2>
+                        <div class="card">
+                            <p>VoiceRecruit est une solution innovante qui remplace la lettre de motivation traditionnelle par un entretien téléphonique instantané avec une IA. Cette approche permet de filtrer naturellement les candidats réellement motivés et d'évaluer leurs compétences orales dès la première étape du processus de recrutement.</p>
+                            
+                            <h3>Le problème résolu</h3>
+                            <p>Dans le recrutement moderne, la lettre de motivation a perdu son efficacité comme filtre naturel depuis l'avènement de l'IA générative. Les recruteurs reçoivent désormais des centaines de candidatures génériques générées en quelques minutes, rendant impossible l'évaluation de l'intérêt réel des candidats.</p>
+                            
+                            <h3>Notre solution</h3>
+                            <p>VoiceRecruit transforme ce processus en proposant un entretien téléphonique instantané avec une IA. Cette approche présente plusieurs avantages :</p>
+                            <ul>
+                                <li>Un filtre naturel plus efficace (passer un appel est plus engageant que générer une lettre)</li>
+                                <li>Une évaluation des soft skills dès la première étape</li>
+                                <li>Un gain de temps considérable pour les recruteurs</li>
+                                <li>Une expérience moderne et dynamique pour les candidats</li>
+                            </ul>
+                        </div>
+                    </section>
+                    
+                    <section id="architecture">
+                        <h2>Architecture du système</h2>
+                        <div class="card">
+                            <p>VoiceRecruit est construit sur une architecture moderne et évolutive, conçue pour offrir une expérience fluide tant aux recruteurs qu'aux candidats.</p>
+                            
+                            <h3>Vue d'ensemble</h3>
+                            <p>L'application est structurée selon une architecture client-serveur avec une séparation claire entre le frontend et le backend :</p>
+                            <ol>
+                                <li><strong>Frontend</strong> : Application Next.js avec Tailwind CSS</li>
+                                <li><strong>Backend</strong> : API RESTful avec base de données Supabase</li>
+                                <li><strong>Services d'IA</strong> : Intégration avec des API d'IA vocale pour la synthèse et la reconnaissance vocale</li>
+                                <li><strong>Système de téléphonie</strong> : Service d'appels téléphoniques programmables</li>
+                            </ol>
+                            
+                            <h3>Flux de données</h3>
+                            <ol>
+                                <li>Le recruteur crée un script d'entretien et configure les voix IA</li>
+                                <li>Le candidat clique sur "Postuler et passer l'appel"</li>
+                                <li>Le système initie un appel téléphonique avec le candidat</li>
+                                <li>L'IA pose les questions configurées et enregistre les réponses</li>
+                                <li>Les réponses sont transcrites et analysées</li>
+                                <li>Le recruteur reçoit un résumé structuré avec analyse</li>
+                            </ol>
+                        </div>
+                    </section>
+                    
+                    <section id="fonctionnalites">
+                        <h2>Fonctionnalités principales</h2>
+                        <div class="card">
+                            <h3>Pour les recruteurs</h3>
+                            <ol>
+                                <li>
+                                    <strong>Création de scripts d'entretien personnalisés</strong>
+                                    <ul>
+                                        <li>Interface intuitive pour créer des questions</li>
+                                        <li>Possibilité de tester le script en temps réel</li>
+                                        <li>Bibliothèque de questions prédéfinies</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Configuration des voix IA</strong>
+                                    <ul>
+                                        <li>Sélection parmi plusieurs voix naturelles</li>
+                                        <li>Paramétrage du ton, de la vitesse et des pauses</li>
+                                        <li>Prévisualisation audio des voix</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Tableau de bord de gestion des candidatures</strong>
+                                    <ul>
+                                        <li>Vue d'ensemble des entretiens réalisés</li>
+                                        <li>Accès aux transcriptions et analyses</li>
+                                        <li>Filtrage et tri des candidats</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Analyse des entretiens</strong>
+                                    <ul>
+                                        <li>Évaluation automatique des réponses</li>
+                                        <li>Détection des points forts et axes d'amélioration</li>
+                                        <li>Scoring des candidats</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            
+                            <h3>Pour les candidats</h3>
+                            <ol>
+                                <li>
+                                    <strong>Expérience de candidature moderne</strong>
+                                    <ul>
+                                        <li>Interface simple et intuitive</li>
+                                        <li>Entretien téléphonique à la demande ou programmé</li>
+                                        <li>Feedback immédiat après l'entretien</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Accessibilité multilingue</strong>
+                                    <ul>
+                                        <li>Support du français et de l'anglais</li>
+                                        <li>Adaptation aux préférences de l'utilisateur</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                    </section>
+                    
+                    <section id="technologies">
+                        <h2>Technologies utilisées</h2>
+                        <div class="card">
+                            <h3>Frontend</h3>
+                            <ul>
+                                <li><strong>Next.js</strong> : Framework React pour le rendu côté serveur et la génération de sites statiques</li>
+                                <li><strong>Tailwind CSS</strong> : Framework CSS utilitaire pour un design responsive et moderne</li>
+                                <li><strong>next-intl</strong> : Bibliothèque pour l'internationalisation (i18n)</li>
+                                <li><strong>next-themes</strong> : Support des thèmes clair et sombre</li>
+                            </ul>
+                            
+                            <h3>Backend</h3>
+                            <ul>
+                                <li><strong>Supabase</strong> : Plateforme backend-as-a-service avec base de données PostgreSQL</li>
+                                <li><strong>API RESTful</strong> : Pour la communication entre le frontend et le backend</li>
+                                <li><strong>JWT</strong> : Pour l'authentification et la sécurisation des API</li>
+                            </ul>
+                            
+                            <h3>IA et Téléphonie</h3>
+                            <ul>
+                                <li><strong>API d'IA vocale</strong> : Pour la synthèse vocale naturelle (type ElevenLabs)</li>
+                                <li><strong>API de reconnaissance vocale</strong> : Pour la transcription des entretiens</li>
+                                <li><strong>API d'analyse de texte</strong> : Pour l'éva
+(Content truncated due to size limit. Use line ranges to read in chunks)

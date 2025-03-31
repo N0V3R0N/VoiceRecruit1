@@ -1,0 +1,213 @@
+{
+  "fr": {
+    "common": {
+      "navigation": {
+        "home": "Accueil",
+        "pricing": "Tarifs",
+        "features": "Fonctionnalités",
+        "login": "Connexion",
+        "signup": "Inscription",
+        "dashboard": "Tableau de bord"
+      },
+      "theme": {
+        "light": "Clair",
+        "dark": "Sombre",
+        "system": "Système"
+      },
+      "language": {
+        "fr": "Français",
+        "en": "Anglais"
+      },
+      "buttons": {
+        "getStarted": "Commencer",
+        "learnMore": "En savoir plus",
+        "contactUs": "Nous contacter",
+        "apply": "Postuler",
+        "save": "Enregistrer",
+        "cancel": "Annuler",
+        "delete": "Supprimer",
+        "edit": "Modifier"
+      }
+    },
+    "home": {
+      "hero": {
+        "title": "Remplacez les lettres de motivation par des entretiens IA",
+        "subtitle": "Filtrez naturellement les candidats avec des entretiens téléphoniques instantanés menés par une IA",
+        "cta": "Essayer gratuitement"
+      },
+      "problem": {
+        "title": "Le Problème",
+        "description": "Dans le recrutement, la lettre de motivation servait autrefois à filtrer naturellement les candidats. Pourquoi ? Parce qu'écrire une bonne lettre prenait 1 heure, voire plus. Seuls les candidats réellement motivés prenaient le temps de la rédiger.",
+        "aiImpact": "Aujourd'hui, avec ChatGPT et l'IA, une lettre de motivation se génère en 5 minutes. Résultat : le pré-filtre naturel a disparu.",
+        "consequences": [
+          "Les recruteurs reçoivent des centaines de candidatures génériques.",
+          "L'intérêt réel du candidat est devenu impossible à mesurer.",
+          "Le tri des candidatures devient inefficace et coûteux."
+        ]
+      },
+      "solution": {
+        "title": "La Solution",
+        "description": "Nous remplaçons la lettre de motivation par un entretien téléphonique instantané avec une IA.",
+        "steps": {
+          "title": "Comment ça marche ?",
+          "step1": "Le candidat clique sur \"Postuler et passer l'appel\" → il reçoit un appel instantané ou programmé.",
+          "step2": "Une IA lui pose des questions personnalisées sur sa motivation, ses compétences, voire des questions techniques selon la personnalisation choisie.",
+          "step3": "L'entretien est enregistré, transcrit et analysé pour fournir aux recruteurs un résumé structuré."
+        }
+      },
+      "benefits": {
+        "title": "Pourquoi ça fonctionne ?",
+        "description": "Passer un appel est plus engageant que générer une lettre en 5 minutes. C'est un nouveau pré-filtre naturel : seuls les candidats réellement motivés et qui pensent avoir les compétences iront jusqu'au bout.",
+        "list": {
+          "title": "La Valeur Ajoutée",
+          "authenticity": "Authenticité : Impossible de copier-coller une réponse IA, les candidats doivent s'exprimer spontanément.",
+          "timeEfficiency": "Gain de temps : Plus besoin de lire des lettres, le recruteur reçoit directement une synthèse et un score.",
+          "engagement": "Meilleur engagement : Une expérience moderne et dynamique pour les candidats.",
+          "softSkills": "Soft skills analysés dès l'étape 1 : Clarté d'expression, structuration des idées, aisance à l'oral."
+        }
+      },
+      "market": {
+        "title": "Le Marché",
+        "description": "Le marché du recrutement digital est en pleine mutation. Avec des acteurs comme LinkedIn, Workday ou SmartRecruiters, les entreprises cherchent des outils plus intelligents pour trier les candidatures efficacement."
+      },
+      "businessModel": {
+        "title": "Le Business Model",
+        "b2b": "B2B SaaS : Abonnement mensuel basé sur le volume de recrutements.",
+        "premium": "Option Premium : Analyse avancée des réponses avec IA, intégration avec les ATS (Applicant Tracking System)."
+      },
+      "conclusion": {
+        "title": "Conclusion",
+        "description": "Le recrutement a changé, mais les outils n'ont pas suivi. La lettre de motivation est morte. Nous proposons son remplacement intelligent, rapide et authentique."
+      }
+    },
+    "pricing": {
+      "title": "Tarifs simples et transparents",
+      "subtitle": "Choisissez le forfait qui correspond à vos besoins de recrutement",
+      "monthly": "Mensuel",
+      "yearly": "Annuel",
+      "savePercent": "Économisez 20%",
+      "plans": {
+        "starter": {
+          "name": "Démarrage",
+          "price": "49",
+          "description": "Idéal pour les petites entreprises avec des besoins de recrutement occasionnels",
+          "features": [
+            "Jusqu'à 10 entretiens par mois",
+            "1 voix IA au choix",
+            "Questions personnalisables",
+            "Synthèse des entretiens",
+            "Support par email"
+          ],
+          "cta": "Commencer"
+        },
+        "professional": {
+          "name": "Professionnel",
+          "price": "149",
+          "description": "Pour les entreprises en croissance avec des besoins de recrutement réguliers",
+          "features": [
+            "Jusqu'à 50 entretiens par mois",
+            "3 voix IA au choix",
+            "Questions personnalisables avancées",
+            "Analyse détaillée des réponses",
+            "Intégration ATS basique",
+            "Support prioritaire"
+          ],
+          "cta": "Commencer",
+          "popular": "Le plus populaire"
+        },
+        "enterprise": {
+          "name": "Entreprise",
+          "price": "Sur mesure",
+          "description": "Pour les grandes entreprises avec des besoins de recrutement importants",
+          "features": [
+            "Entretiens illimités",
+            "Toutes les voix IA disponibles",
+            "Questions personnalisables avancées",
+            "Analyse IA approfondie",
+            "Intégration ATS complète",
+            "API dédiée",
+            "Gestionnaire de compte dédié"
+          ],
+          "cta": "Nous contacter"
+        }
+      }
+    },
+    "login": {
+      "title": "Connexion",
+      "email": "Email",
+      "password": "Mot de passe",
+      "rememberMe": "Se souvenir de moi",
+      "forgotPassword": "Mot de passe oublié ?",
+      "submit": "Se connecter",
+      "noAccount": "Vous n'avez pas de compte ?",
+      "signUp": "S'inscrire"
+    },
+    "signup": {
+      "title": "Créer un compte",
+      "name": "Nom complet",
+      "email": "Email",
+      "company": "Entreprise",
+      "password": "Mot de passe",
+      "confirmPassword": "Confirmer le mot de passe",
+      "terms": "J'accepte les conditions d'utilisation et la politique de confidentialité",
+      "submit": "S'inscrire",
+      "haveAccount": "Vous avez déjà un compte ?",
+      "login": "Se connecter"
+    },
+    "dashboard": {
+      "welcome": "Bienvenue, {name}",
+      "stats": {
+        "title": "Statistiques",
+        "interviews": "Entretiens",
+        "completed": "Terminés",
+        "pending": "En attente",
+        "positions": "Postes ouverts"
+      },
+      "sidebar": {
+        "overview": "Vue d'ensemble",
+        "positions": "Postes",
+        "candidates": "Candidats",
+        "interviews": "Entretiens",
+        "settings": "Paramètres",
+        "voiceConfig": "Configuration des voix",
+        "billing": "Facturation",
+        "help": "Aide"
+      }
+    },
+    "voiceConfig": {
+      "title": "Configuration des voix IA",
+      "description": "Personnalisez les voix IA pour vos entretiens téléphoniques",
+      "voiceSelection": {
+        "title": "Sélection de voix",
+        "description": "Choisissez parmi nos voix naturelles de haute qualité",
+        "preview": "Aperçu",
+        "current": "Voix actuelle"
+      },
+      "questionConfig": {
+        "title": "Configuration des questions",
+        "description": "Personnalisez les questions posées par l'IA",
+        "addQuestion": "Ajouter une question",
+        "editQuestion": "Modifier la question",
+        "deleteQuestion": "Supprimer la question",
+        "questionTypes": {
+          "motivation": "Motivation",
+          "experience": "Expérience",
+          "skills": "Compétences",
+          "technical": "Technique",
+          "personality": "Personnalité"
+        }
+      },
+      "interviewFlow": {
+        "title": "Déroulement de l'entretien",
+        "description": "Configurez le déroulement de l'entretien téléphonique",
+        "introduction": "Introduction",
+        "mainQuestions": "Questions principales",
+        "conclusion": "Conclusion",
+        "duration": "Durée estimée"
+      },
+      "save": "Enregistrer la configuration",
+      "preview": "Prévisualiser l'entretien",
+      "reset": "Réinitialiser"
+    }
+  }
+}
